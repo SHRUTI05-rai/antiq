@@ -1,60 +1,32 @@
-/* Reset */
-* { 
-    margin-top: 5vh ;
-    padding: 0;
-    box-sizing: border-box;
+let slideIndex = 0;
+
+function showSlides() {
+    let slides = document.querySelectorAll(".slide");
+    
+    // Hide all slides
+    slides.forEach(slide => slide.style.display = "none");
+
+    // Move to the next slide
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    // Show current slide
+    slides[slideIndex - 1].style.display = "block";
+
+    // Auto slide every 3 seconds
+    setTimeout(showSlides, 3000);
 }
 
-/* Slideshow Container */
-.slideshow-container {
+// Manual Slide Control
+function changeSlide(n) {
+    slideIndex += n;
+    let slides = document.querySelectorAll(".slide");
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex < 1) { slideIndex = slides.length; }
 
-    width: 100%;
-    max-width: 800px;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
+    slides.forEach(slide => slide.style.display = "none");
+    slides[slideIndex - 1].style.display = "block";
 }
 
-/* Slides */
-.slide {
-    display: none;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Navigation Buttons */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 15px;
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-/* Fade Effect */
-.fade {
-    animation: fadeEffect 1.5s ease-in-out;
-}
-
-@keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
+// Initialize Slideshow
+showSlides();
