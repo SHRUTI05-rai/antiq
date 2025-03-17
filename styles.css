@@ -3,7 +3,6 @@ body{
 }
 
 
-
 /* Reset */
 * { 
     margin-top: 5vh ;
@@ -25,22 +24,24 @@ body{
 /* Slides */
 .slide {
     display: none;
+
 }
 
 .slide img {
-    width: 100%;
-    height: auto;
+    background-size:contain,cover ;
+    width: 140vh;
+    height: 75vh;
     border-radius: 10px;
 }
 
 /* Navigation Buttons */
 .prev, .next {
     position: absolute;
-    top: 50%;
+    top: 50%; 
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 15px;
+    background-color: rgb(0, 0, 0);
+    color: #c86bfa;
+     padding: 10px 10px; 
     font-size: 24px;
     border: none;
     cursor: pointer;
@@ -55,13 +56,10 @@ body{
     right: 10px;
 }
 
-/* Fade Effect */
-.fade {
-    animation: fadeEffect 1.5s ease-in-out;
-}
 
 @keyframes fadeEffect {
     from { opacity: 0.4; }
     to { opacity: 1; }
 }
+
 
