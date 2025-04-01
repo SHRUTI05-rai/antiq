@@ -1,3 +1,6 @@
+
+
+
 /* Reset */
 * { 
     margin: 0%;
@@ -210,10 +213,7 @@
      right: 10px;
  }
  
- /* Fade Effect */
- /* .fade {
-     animation: fadeEffect 1.5s ease-in-out;
- } */
+
  
  @keyframes fadeEffect {
      from { opacity: 0.4; }
@@ -267,6 +267,24 @@
      text-decoration: underline;
      color: #EFDCAB;
  }
+
+.footerbtn{
+    width: 7vh;
+    height: 7vh;
+    
+}
+#inst{
+    background-size: cover;
+    background-image: url("https://cdn-icons-png.freepik.com/256/15707/15707869.png?semt=ais_hybrid");
+ }
+ #gith{
+    background-size: cover;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/25/25231.png");
+ }
+ .footerbtn:hover{
+    background-color: #f3ff05;
+ }
+
  .select-container {
     position: relative;
     display: inline-block;
