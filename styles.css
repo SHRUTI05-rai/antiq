@@ -10,7 +10,7 @@
     width: auto;
  }
  .navbar{
-    
+    position: fixed;
      width: 100%;
      display: flex;
      background-color: #cd6f04;
